@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rapture Removals | Elite Furniture Logistics</title>
+    <title>Rapture Removals | Elite Furniture Logistics & Relocations</title>
     <style>
         :root { 
-            --navy: #0f172a; 
+            --navy: #090d16; 
             --charcoal: #1e293b;
-            --accent: #0284c7; /* Strong sky blue */
+            --accent: #0284c7; 
             --accent-light: #e0f2fe;
             --white: #ffffff; 
             --slate: #475569; 
@@ -30,10 +30,10 @@
             -webkit-font-smoothing: antialiased;
         }
 
-        /* Navigation */
+        /* Premium Brand Navigation */
         header { 
             background: var(--white); 
-            padding: 20px 5%; 
+            padding: 24px 6%; 
             display: flex; 
             justify-content: space-between; 
             align-items: center; 
@@ -45,18 +45,19 @@
         
         .logo { 
             font-weight: 900; 
-            font-size: 1.3rem; 
-            letter-spacing: 1px; 
+            font-size: 1.6rem; 
+            letter-spacing: 1.5px; 
+            color: var(--navy);
         }
 
-        .logo span { color: var(--slate); font-weight: 400; }
+        .logo span { color: var(--accent); font-weight: 900; }
 
         .location-tag {
-            font-weight: 600;
+            font-weight: 700;
             color: var(--slate);
             font-size: 0.85rem;
             text-transform: uppercase;
-            letter-spacing: 0.5px;
+            letter-spacing: 1px;
             display: flex;
             align-items: center;
             gap: 8px;
@@ -70,11 +71,11 @@
             border-radius: 50%;
         }
         
-        /* Split-Screen Hero Section */
+        /* High-Impact Hero Container */
         .hero-container {
-            background: var(--white);
+            background: linear-gradient(180deg, var(--white) 0%, #f1f5f9 100%);
             border-bottom: 1px solid var(--border);
-            padding: 80px 5%;
+            padding: 90px 6% 120px;
         }
 
         .hero-grid {
@@ -91,42 +92,44 @@
         }
 
         .hero-badge {
-            background: var(--accent-light);
-            color: var(--accent);
-            padding: 6px 16px;
+            background: var(--navy);
+            color: var(--white);
+            padding: 8px 18px;
             border-radius: 100px;
             font-size: 0.8rem;
             font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 1.5px;
             display: inline-block;
-            margin-bottom: 20px;
+            margin-bottom: 24px;
         }
 
         .hero-content h1 { 
-            font-size: 3.5rem; 
-            font-weight: 800;
-            line-height: 1.15;
-            margin-bottom: 20px; 
-            letter-spacing: -1.5px;
+            font-size: 4rem; 
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 24px; 
+            letter-spacing: -2px;
+            color: var(--navy);
         }
 
         .hero-content h1 span { color: var(--accent); }
 
         .hero-content p {
-            font-size: 1.2rem;
+            font-size: 1.25rem;
             color: var(--slate);
-            margin-bottom: 35px;
-            max-width: 600px;
+            margin-bottom: 40px;
+            max-width: 620px;
+            font-weight: 400;
         }
 
-        /* Hero Image Placement */
+        /* Styled Image Framing */
         .hero-image-wrapper {
-            background: var(--light-bg);
-            padding: 12px;
-            border-radius: 24px;
+            background: var(--white);
+            padding: 16px;
+            border-radius: 28px;
             border: 1px solid var(--border);
-            box-shadow: 0 20px 40px rgba(15, 23, 42, 0.06);
+            box-shadow: 0 30px 60px rgba(15, 23, 42, 0.08);
         }
 
         .hero-image-wrapper img {
@@ -136,11 +139,11 @@
             display: block;
         }
 
-        /* Key Metrics / Value Grid */
+        /* Floating Trust Parameters */
         .trust-grid {
             max-width: 1300px;
-            margin: -40px auto 80px;
-            padding: 0 5%;
+            margin: -60px auto 80px;
+            padding: 0 6%;
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 24px;
@@ -151,15 +154,16 @@
         .trust-box {
             background: var(--navy);
             color: var(--white);
-            padding: 30px;
-            border-radius: 16px;
-            box-shadow: 0 10px 30px rgba(15, 23, 42, 0.1);
+            padding: 36px;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(15, 23, 42, 0.15);
+            border: 1px solid rgba(255,255,255,0.05);
         }
 
         .trust-box h4 {
-            font-size: 1.1rem;
-            margin-bottom: 8px;
-            color: var(--white);
+            font-size: 1.15rem;
+            font-weight: 700;
+            margin-bottom: 10px;
             display: flex;
             align-items: center;
             gap: 10px;
@@ -170,11 +174,12 @@
         .trust-box p {
             color: #94a3b8;
             font-size: 0.95rem;
+            line-height: 1.6;
         }
 
-        /* Section Layouts */
+        /* Section Layout Rules */
         .section-padding {
-            padding: 80px 5%;
+            padding: 100px 6%;
         }
 
         .section-inner {
@@ -183,23 +188,35 @@
         }
 
         .section-header {
-            margin-bottom: 50px;
+            margin-bottom: 60px;
+            text-align: center;
+        }
+
+        .section-header .sub {
+            color: var(--accent);
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+            margin-bottom: 12px;
+            display: block;
         }
 
         .section-header h2 {
-            font-size: 2.4rem;
-            font-weight: 800;
-            letter-spacing: -1px;
-            margin-bottom: 12px;
+            font-size: 2.8rem;
+            font-weight: 900;
+            letter-spacing: -1.5px;
+            margin-bottom: 16px;
         }
 
         .section-header p {
             color: var(--slate);
-            font-size: 1.1rem;
-            max-width: 600px;
+            font-size: 1.15rem;
+            max-width: 700px;
+            margin: 0 auto;
         }
 
-        /* Services Grid Split */
+        /* Services Framework */
         .services-layout {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -208,62 +225,69 @@
         
         .card { 
             background: var(--white); 
-            padding: 40px; 
-            border-radius: 20px; 
+            padding: 48px; 
+            border-radius: 24px; 
             border: 1px solid var(--border); 
-            transition: all 0.3s ease;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(15, 23, 42, 0.05);
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.08);
             border-color: #cbd5e1;
         }
 
         .card-num {
             font-size: 0.85rem;
-            font-weight: 700;
+            font-weight: 800;
             color: var(--accent);
             text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 16px;
+            letter-spacing: 1.5px;
+            margin-bottom: 20px;
             display: block;
         }
 
         .card h3 {
-            font-size: 1.4rem;
-            margin-bottom: 12px;
-            letter-spacing: -0.3px;
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin-bottom: 14px;
+            letter-spacing: -0.5px;
         }
 
         .card p {
             color: var(--slate);
-            font-size: 0.98rem;
+            font-size: 1rem;
+            line-height: 1.7;
         }
 
-        /* Step-by-Step Operations Block */
+        /* Operations Framework Group */
         .operations-bg {
-            background: #f1f5f9;
+            background: var(--navy);
+            color: var(--white);
+        }
+
+        .operations-bg .section-header p {
+            color: #94a3b8;
         }
 
         .timeline {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
+            gap: 24px;
         }
 
         .step {
             position: relative;
-            background: var(--white);
-            padding: 30px;
-            border-radius: 16px;
-            border: 1px solid var(--border);
+            background: rgba(255, 255, 255, 0.03);
+            padding: 36px 30px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
         }
 
         .step-idx {
-            font-size: 2rem;
+            font-size: 2.5rem;
             font-weight: 900;
-            color: #e2e8f0;
+            color: rgba(255, 255, 255, 0.05);
             position: absolute;
             top: 15px;
             right: 20px;
@@ -271,81 +295,119 @@
         }
 
         .step h5 {
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             font-weight: 700;
-            margin-bottom: 8px;
-            margin-top: 10px;
+            margin-bottom: 10px;
+            color: var(--white);
         }
 
         .step p {
-            font-size: 0.9rem;
-            color: var(--slate);
+            font-size: 0.95rem;
+            color: #94a3b8;
+            line-height: 1.6;
         }
         
-        /* Call To Action Banner */
-        .cta-banner {
-            background: linear-gradient(135deg, var(--navy) 0%, #020617 100%);
-            color: var(--white);
-            padding: 80px 5%;
-            border-radius: 24px;
-            text-align: center;
-            max-width: 1200px;
-            margin: 80px auto;
+        /* Direct Communication Call To Action Split */
+        .contact-section {
+            background: var(--white);
+            padding: 100px 6%;
+            border-top: 1px solid var(--border);
         }
 
-        .cta-banner h2 {
-            font-size: 2.5rem;
-            font-weight: 800;
+        .contact-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            background: linear-gradient(135deg, var(--navy) 0%, #030712 100%);
+            border-radius: 32px;
+            padding: 60px;
+            color: var(--white);
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.25);
+        }
+
+        .contact-text h2 {
+            font-size: 2.6rem;
+            font-weight: 900;
             letter-spacing: -1px;
             margin-bottom: 16px;
         }
 
-        .cta-banner p {
+        .contact-text p {
             color: #94a3b8;
             font-size: 1.1rem;
-            max-width: 500px;
-            margin: 0 auto 32px;
+            line-height: 1.7;
         }
 
-        /* Buttons */
-        .btn { 
-            background: var(--accent); 
-            color: var(--white); 
-            padding: 16px 36px; 
-            border-radius: 10px; 
-            text-decoration: none; 
-            font-weight: 600; 
-            font-size: 1rem;
-            display: inline-block; 
+        .contact-channels {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        /* Action Buttons */
+        .btn-link {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 24px 32px;
+            border-radius: 16px;
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.2rem;
             transition: all 0.2s ease;
         }
 
-        .btn:hover {
-            background: #0369a1;
-            transform: translateY(-1px);
+        .btn-link span.action-label {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--accent);
+            display: block;
+            margin-bottom: 4px;
+            font-weight: 500;
         }
 
-        .btn-dark {
-            background: var(--navy);
-        }
-        .btn-dark:hover {
-            background: var(--charcoal);
+        .btn-link:hover {
+            background: var(--white);
+            color: var(--navy);
+            transform: translateY(-2px);
         }
 
-        /* Responsive Breakpoints */
+        .btn-link.primary-call {
+            background: var(--accent);
+            border-color: var(--accent);
+        }
+        .btn-link.primary-call span.action-label {
+            color: var(--white);
+            opacity: 0.9;
+        }
+        .btn-link.primary-call:hover {
+            background: #026ca3;
+            color: var(--white);
+        }
+
+        /* Responsive Configuration */
         @media (max-width: 1024px) {
-            .hero-grid { grid-template-columns: 1fr; gap: 40px; text-align: center; }
-            .hero-content { text-align: center; }
-            .hero-content p { margin-left: auto; margin-right: auto; }
+            .hero-grid { grid-template-columns: 1fr; text-align: center; gap: 40px; }
+            .hero-content h1 { font-size: 3.2rem; }
+            .hero-content p { margin: 0 auto 30px; }
             .trust-grid { grid-template-columns: 1fr; margin-top: 40px; }
             .services-layout { grid-template-columns: 1fr; }
             .timeline { grid-template-columns: repeat(2, 1fr); }
+            .contact-container { grid-template-columns: 1fr; gap: 40px; padding: 40px; }
         }
 
         @media (max-width: 640px) {
-            .hero-content h1 { font-size: 2.6rem; }
+            .hero-content h1 { font-size: 2.5rem; }
             .timeline { grid-template-columns: 1fr; }
-            .cta-banner h2 { font-size: 1.8rem; }
+            .section-header h2 { font-size: 2rem; }
+            .contact-text h2 { font-size: 2rem; }
         }
     </style>
 </head>
@@ -353,107 +415,130 @@
 
     <!-- Professional Navigation Bar -->
     <header>
-        <div class="logo">RAPTURE <span>REMOVALS</span></div>
-        <div class="location-tag">Albury-Wodonga & Surrounding</div>
+        <div class="logo">RAPTURE<span>REMOVALS</span></div>
+        <div class="location-tag">Albury-Wodonga & Surrounding Regions</div>
     </header>
 
-    <!-- Asymmetric Split Hero Section -->
+    <!-- Elevated Focus Hero Section -->
     <section class="hero-container">
         <div class="hero-grid">
             <div class="hero-content">
-                <div class="hero-badge">Premium Furniture Logistics</div>
-                <h1>Furniture Removals with <span>Absolute Integrity</span>.</h1>
-                <p>Fully-insured transport engineered for residential estates and commercial clients who demand meticulous execution, punctuality, and total structural care.</p>
-                <a href="#contact" class="btn btn-dark">Get a Premium Quote</a>
+                <div class="hero-badge">Premium Moving Professionals</div>
+                <h1>Relocations Handled with <span>Absolute Integrity</span>.</h1>
+                <p>At Rapture Removals, we don't just move furniture—we protect your lifestyle. Built on a foundation of uncompromising discipline and careful execution, we handle your residential estate or office logistics seamlessly.</p>
+                <a href="#connect" class="btn-link primary-call" style="display:inline-flex; padding: 16px 36px; font-size: 1.05rem; border-radius: 12px;">
+                    Book Your Move Now
+                </a>
             </div>
             <div class="hero-image-wrapper">
-                <!-- Framed Workflow Graphic inside the main focus field -->
-                <img src="watermarked_img_16777458570956500019.png" alt="Rapture Removals Operational Workflow Map">
+                <!-- Visual Workspace Mapping Display Field -->
+                <img src="watermarked_img_16777458570956500019.png" alt="Rapture Removals Operational Framework Map">
             </div>
         </div>
     </section>
 
-    <!-- Value Anchor Cards (Balances Whitespace) -->
+    <!-- Strategic Trust Indicators -->
     <div class="trust-grid">
         <div class="trust-box">
-            <h4><span>✓</span> Fully Insured Risk Cover</h4>
-            <p>Comprehensive protection parameters covering every item from transit assets to property surfaces.</p>
+            <h4><span>✓</span> Fully Insured Coverage</h4>
+            <p>Complete confidence parameters protect your high-value assets and property structural layout end-to-end.</p>
         </div>
         <div class="trust-box">
-            <h4><span>✓</span> Strict Asset Protection</h4>
-            <p>Headed by disciplined packing protocols using high-density shock blankets and commercial restraint bars.</p>
+            <h4><span>✓</span> Absolute Accountability</h4>
+            <p>Every dynamic step is tracked meticulously. No hidden service charges, unexpected fees, or shortcuts.</p>
         </div>
         <div class="trust-box">
-            <h4><span>✓</span> Complete Account Transparency</h4>
-            <p>No hidden fuel or structural handling fees. Clear, itemized, and contracted logistics schedules.</p>
+            <h4><span>✓</span> Elite Regional Service</h4>
+            <p>Proudly local, reliable, and run with the standard of discipline expected by Albury-Wodonga residents.</p>
         </div>
     </div>
 
-    <!-- Structured Strategic Services Block -->
+    <!-- Targeted Core Services Section -->
     <section class="section-padding">
         <div class="section-inner">
             <div class="section-header">
-                <h2>Tailored Relocation Services</h2>
-                <p>Every transit profile is customized around item vulnerability, inventory size, and site conditions.</p>
+                <span class="sub">What We Deliver</span>
+                <h2>Premium Relocation Services</h2>
+                <p>Designed around meticulous organization, heavy-duty protective systems, and timed delivery paths.</p>
             </div>
             <div class="services-layout">
                 <div class="card">
-                    <span class="card-num">Protocol 01</span>
-                    <h3>Residential Relocation</h3>
-                    <p>Meticulous home transfers handled with care. Every piece of custom furniture, artwork, and appliance is treated with absolute priority, heavily wrapped, and placed precisely inside your new space.</p>
+                    <span class="card-num">Service Line 01</span>
+                    <h3>Premium Residential Moves</h3>
+                    <p>Meticulous whole-home transfers executed with elite care. From structural family heirlooms and fine art to custom furniture installations, we pack, lift, and place each piece flawlessly within your next destination.</p>
                 </div>
                 <div class="card">
-                    <span class="card-num">Protocol 02</span>
-                    <h3>Commercial Transitions</h3>
-                    <p>Designed to minimize company operational downtime. We coordinate streamlined loading pathways to transfer office fixtures, infrastructure, and files cleanly and efficiently.</p>
+                    <span class="card-num">Service Line 02</span>
+                    <h3>Commercial & Office Logistics</h3>
+                    <p>Streamlined asset transitions designed to protect sensitive tech assets and reduce workplace downtime. We structure swift load sequences to keep your business moving ahead uninterrupted.</p>
                 </div>
                 <div class="card">
-                    <span class="card-num">Protocol 03</span>
-                    <h3>High-Care Wrapping</h3>
-                    <p>The standard baseline for every move. Fragile components are individually cataloged, strapped securely in transit, and packed to fully mitigate friction or road-wear vibration.</p>
+                    <span class="card-num">Service Line 03</span>
+                    <h3>High-Tier Structural Protection</h3>
+                    <p>The standard benchmark for all transit inventory. Delicate surfaces are individually dynamic-blanketed, locked utilizing high-tensile tied anchor structures, and checked to prevent transit friction.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Step-by-Step Logistics Flow Block (Adds Content Depth) -->
+    <!-- Operational Strategy Timeline -->
     <section class="section-padding operations-bg">
         <div class="section-inner">
             <div class="section-header">
-                <h2>The Execution Framework</h2>
-                <p>How we ensure a seamless, damage-free transport process from initial review to final room placement.</p>
+                <span class="sub">The Framework</span>
+                <h2>Our Meticulous Workflow</h2>
+                <p>We break down each logistics sequence systematically to guarantee zero asset wear and maximum efficiency.</p>
             </div>
             <div class="timeline">
                 <div class="step">
                     <div class="step-idx">01</div>
                     <h5>Inventory Audit</h5>
-                    <p>We review the scale and structural fragile areas of your furniture profile.</p>
+                    <p>Strategic structural assessment of bulk, fragile parameters, and pathway access.</p>
                 </div>
                 <div class="step">
                     <div class="step-idx">02</div>
-                    <h5>Heavy Blanket Wrapping</h5>
-                    <p>Industrial shock blankets are systematically taped and layered onto delicate surfaces.</p>
+                    <h5>Heavy Layer Packing</h5>
+                    <p>Thick impact padding is systematically taped onto critical areas and load surfaces.</p>
                 </div>
                 <div class="step">
                     <div class="step-idx">03</div>
-                    <h5>Secure Transport Lock</h5>
-                    <p>Assets are anchored inside specialized tracks to prevent center-of-gravity shifting.</p>
+                    <h5>Structural Locking</h5>
+                    <p>Vehicles are balanced and loaded securely along internal tie rails to eliminate transit shifting.</p>
                 </div>
                 <div class="step">
                     <div class="step-idx">04</div>
-                    <h5>Precision Unload</h5>
-                    <p>Every single item is manually set down according to room-by-room staging layout rules.</p>
+                    <h5>Targeted Placement</h5>
+                    <p>Unloaded strictly corresponding to your spatial staging commands, preventing double-handling.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Conversion Banner Footer -->
-    <section class="section-padding" id="contact">
-        <div class="cta-banner">
-            <h2>Secure Your Transport Date</h2>
-            <p>Contact our local Albury team today for an accurate, itemized structural moving quote.</p>
-            <a href="tel:#" class="btn">Book Transfer Now</a>
+    <!-- Direct Contact and Engagement Zone -->
+    <section class="contact-section" id="connect">
+        <div class="contact-container">
+            <div class="contact-text">
+                <h2>Let's Plan Your Move.</h2>
+                <p>Ready for a seamless, damage-free relocation experience? Reach out to our transport dispatch team directly. We provide transparent, accurate quotes tailored to your unique inventory requirements.</p>
+            </div>
+            <div class="contact-channels">
+                <!-- Telephone Link -->
+                <a href="tel:0437788945" class="btn-link primary-call">
+                    <div>
+                        <span class="action-label">Call Our Transport Line</span>
+                        0437 788 945
+                    </div>
+                    <span style="font-size: 1.5rem;">📞</span>
+                </a>
+                <!-- Email Link Layout Placeholder -->
+                <a href="mailto:bookings@raptureremovals.com.au" class="btn-link">
+                    <div>
+                        <span class="action-label">Send Us An Email</span>
+                        bookings@raptureremovals.com.au
+                    </div>
+                    <span style="font-size: 1.5rem;">✉️</span>
+                </a>
+            </div>
         </div>
     </section>
 

@@ -3,54 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rapture Removals | Professional Furniture Transport</title>
+    <title>Rapture Removals | Premium Furniture Transport</title>
     <style>
-        :root { --navy: #0f172a; --sky: #bae6fd; --white: #ffffff; }
-        body { font-family: 'Segoe UI', sans-serif; margin: 0; background-color: #f8fafc; color: var(--navy); }
+        :root {
+            --navy: #0f172a;
+            --sky: #bae6fd;
+            --white: #ffffff;
+            --slate: #64748b;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Inter', -apple-system, sans-serif; color: var(--navy); line-height: 1.6; background: #f8fafc; }
         
-        /* Premium Header */
-        nav { background: var(--white); padding: 20px 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 3px solid var(--sky); }
-        
-        /* Hero Section with Logo */
+        /* Nav */
+        header { background: var(--white); padding: 20px 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #e2e8f0; }
+        .logo { font-weight: 800; font-size: 1.5rem; letter-spacing: -0.5px; }
+
+        /* Hero */
         .hero { padding: 80px 5%; background: var(--white); text-align: center; }
-        .hero img { max-width: 600px; width: 100%; border-radius: 12px; margin-bottom: 20px; }
-        .hero h1 { font-size: 3rem; margin-bottom: 10px; }
-        
-        /* Services Grid */
-        .services { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; padding: 50px 5%; }
-        .card { background: var(--white); padding: 30px; border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); text-align: center; }
-        
-        .cta-button { background: var(--navy); color: white; padding: 15px 30px; border-radius: 8px; text-decoration: none; font-weight: bold; }
+        .hero img { max-width: 800px; width: 100%; border-radius: 16px; box-shadow: 0 20px 40px rgba(0,0,0,0.1); margin-bottom: 30px; }
+        .hero h1 { font-size: 3.5rem; margin-bottom: 15px; }
+        .hero p { font-size: 1.25rem; color: var(--slate); max-width: 600px; margin: 0 auto 30px; }
+
+        /* Services */
+        .services { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; padding: 80px 5%; max-width: 1200px; margin: 0 auto; }
+        .card { background: var(--white); padding: 40px; border-radius: 20px; border: 1px solid #e2e8f0; text-align: center; }
+        .card h3 { margin-bottom: 15px; font-size: 1.5rem; }
+
+        /* Button */
+        .btn { background: var(--navy); color: white; padding: 18px 40px; border-radius: 12px; text-decoration: none; font-weight: 600; display: inline-block; transition: transform 0.2s; }
+        .btn:hover { transform: translateY(-3px); }
     </style>
 </head>
 <body>
 
-    <nav>
-        <div style="font-weight: 800; font-size: 1.5rem;">RAPTURE REMOVALS</div>
-        <div>Albury & Surrounding Regions</div>
-    </nav>
+    <header>
+        <div class="logo">RAPTURE REMOVALS</div>
+        <div style="font-weight: 500;">Albury & Surrounding Regions</div>
+    </header>
 
     <section class="hero">
-        <!-- Replace 'truck.png' with the filename of your uploaded professional logo -->
-        <img src="truck.png" alt="Rapture Removals Professional Truck">
-        <h1>Furniture Removals with Integrity</h1>
-        <p>Expert, careful, and fully insured transport for your home or business.</p>
-        <br>
-        <a href="#quote" class="cta-button">Request Professional Quote</a>
+        <!-- Ensure this filename matches exactly what you uploaded to GitHub -->
+        <img src="watermarked_img_5163919176597471161.png" alt="Rapture Removals Professional Fleet">
+        <h1>Furniture Removals with Integrity.</h1>
+        <p>Premium, fully-insured furniture transport for residential and commercial clients across Albury-Wodonga and regional NSW/VIC.</p>
+        <a href="mailto:info@raptureremovals.com" class="btn">Request a Quote</a>
     </section>
 
     <div class="services">
         <div class="card">
-            <h3>Residential</h3>
-            <p>Full-service home relocations with meticulous care for your furniture.</p>
+            <h3>Residential Moves</h3>
+            <p>Full-service home relocation. We handle your furniture with the precision it deserves.</p>
         </div>
         <div class="card">
-            <h3>Commercial</h3>
-            <p>Minimal downtime office moves handled by our professional team.</p>
+            <h3>Commercial Relocation</h3>
+            <p>Professional business moves designed to minimize operational downtime.</p>
         </div>
         <div class="card">
-            <h3>Specialized Items</h3>
-            <p>Safe handling for antiques, pianos, and high-value fragile pieces.</p>
+            <h3>Specialized Transport</h3>
+            <p>Safe, secure handling of antiques, pianos, and high-value single items.</p>
         </div>
     </div>
 

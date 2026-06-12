@@ -8,9 +8,10 @@
         :root { 
             --navy: #0f172a; 
             --charcoal: #1e293b;
-            --accent: #38bdf8; /* Sharp sky blue for highlights */
+            --accent: #0284c7; /* Strong sky blue */
+            --accent-light: #e0f2fe;
             --white: #ffffff; 
-            --slate: #64748b; 
+            --slate: #475569; 
             --light-bg: #f8fafc;
             --border: #e2e8f0;
         }
@@ -32,7 +33,7 @@
         /* Navigation */
         header { 
             background: var(--white); 
-            padding: 24px 8%; 
+            padding: 20px 5%; 
             display: flex; 
             justify-content: space-between; 
             align-items: center; 
@@ -44,20 +45,16 @@
         
         .logo { 
             font-weight: 900; 
-            font-size: 1.4rem; 
+            font-size: 1.3rem; 
             letter-spacing: 1px; 
-            color: var(--navy);
         }
 
-        .logo span {
-            color: var(--slate);
-            font-weight: 400;
-        }
+        .logo span { color: var(--slate); font-weight: 400; }
 
         .location-tag {
             font-weight: 600;
             color: var(--slate);
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             text-transform: uppercase;
             letter-spacing: 0.5px;
             display: flex;
@@ -67,254 +64,288 @@
 
         .location-tag::before {
             content: '';
-            display: inline-block;
             width: 8px;
             height: 8px;
-            background: #22c55e; /* Active green dot */
+            background: #22c55e;
             border-radius: 50%;
         }
         
-        /* Premium Hero Section */
-        .hero { 
-            padding: 100px 8% 80px; 
-            background: linear-gradient(135deg, var(--navy) 0%, #020617 100%); 
-            color: var(--white);
-            text-align: center;
-            position: relative;
+        /* Split-Screen Hero Section */
+        .hero-container {
+            background: var(--white);
+            border-bottom: 1px solid var(--border);
+            padding: 80px 5%;
+        }
+
+        .hero-grid {
+            max-width: 1300px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 60px;
+            align-items: center;
         }
         
+        .hero-content {
+            text-align: left;
+        }
+
         .hero-badge {
-            background: rgba(56, 189, 248, 0.1);
+            background: var(--accent-light);
             color: var(--accent);
             padding: 6px 16px;
             border-radius: 100px;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 1.5px;
+            letter-spacing: 1px;
             display: inline-block;
-            margin-bottom: 24px;
-            border: 1px solid rgba(56, 189, 248, 0.2);
+            margin-bottom: 20px;
         }
 
-        .hero h1 { 
-            font-size: 3.8rem; 
+        .hero-content h1 { 
+            font-size: 3.5rem; 
             font-weight: 800;
             line-height: 1.15;
-            margin-bottom: 24px; 
+            margin-bottom: 20px; 
             letter-spacing: -1.5px;
-            max-width: 900px;
-            margin-left: auto;
-            margin-right: auto;
         }
 
-        .hero h1 span {
-            color: var(--accent);
+        .hero-content h1 span { color: var(--accent); }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            color: var(--slate);
+            margin-bottom: 35px;
+            max-width: 600px;
         }
 
-        .hero p {
-            font-size: 1.3rem;
-            color: #94a3b8;
-            margin-bottom: 40px;
-            max-width: 650px;
-            margin-left: auto;
-            margin-right: auto;
-            font-weight: 400;
+        /* Hero Image Placement */
+        .hero-image-wrapper {
+            background: var(--light-bg);
+            padding: 12px;
+            border-radius: 24px;
+            border: 1px solid var(--border);
+            box-shadow: 0 20px 40px rgba(15, 23, 42, 0.06);
         }
 
-        /* Core Values / Mission Statement */
-        .mission-strip {
-            background: var(--white);
-            padding: 40px 8%;
-            border-bottom: 1px solid var(--border);
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            gap: 30px;
+        .hero-image-wrapper img {
+            width: 100%;
+            height: auto;
+            border-radius: 16px;
+            display: block;
         }
 
-        .value-item {
+        /* Key Metrics / Value Grid */
+        .trust-grid {
+            max-width: 1300px;
+            margin: -40px auto 80px;
+            padding: 0 5%;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .trust-box {
+            background: var(--navy);
+            color: var(--white);
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(15, 23, 42, 0.1);
+        }
+
+        .trust-box h4 {
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+            color: var(--white);
             display: flex;
             align-items: center;
-            gap: 12px;
-            font-weight: 700;
-            font-size: 1.1rem;
-            color: var(--navy);
+            gap: 10px;
         }
 
-        .value-item span {
-            color: var(--accent);
-            font-size: 1.5rem;
+        .trust-box h4 span { color: var(--accent); }
+
+        .trust-box p {
+            color: #94a3b8;
+            font-size: 0.95rem;
         }
-        
-        /* Workflow / Image Section */
-        .process-section { 
-            padding: 100px 8%; 
-            max-width: 1100px; 
-            margin: 0 auto; 
-            text-align: center; 
+
+        /* Section Layouts */
+        .section-padding {
+            padding: 80px 5%;
+        }
+
+        .section-inner {
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
         .section-header {
-            max-width: 600px;
-            margin: 0 auto 60px;
+            margin-bottom: 50px;
         }
 
         .section-header h2 {
-            font-size: 2.5rem;
+            font-size: 2.4rem;
             font-weight: 800;
-            letter-spacing: -0.5px;
-            margin-bottom: 16px;
+            letter-spacing: -1px;
+            margin-bottom: 12px;
         }
 
         .section-header p {
             color: var(--slate);
             font-size: 1.1rem;
-        }
-        
-        .image-container {
-            background: var(--white);
-            padding: 16px;
-            border-radius: 24px;
-            box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.08);
-            border: 1px solid var(--border);
+            max-width: 600px;
         }
 
-        .process-image { 
-            width: 100%; 
-            height: auto;
-            border-radius: 12px; 
-            display: block;
-        }
-        
-        /* Services Grid */
-        .services-container {
-            background: #f1f5f9;
-            padding: 100px 8%;
-        }
-
-        .services { 
-            display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
-            gap: 40px; 
-            max-width: 1200px; 
-            margin: 0 auto; 
+        /* Services Grid Split */
+        .services-layout {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
         }
         
         .card { 
             background: var(--white); 
-            padding: 48px; 
-            border-radius: 24px; 
+            padding: 40px; 
+            border-radius: 20px; 
             border: 1px solid var(--border); 
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 4px;
-            height: 100%;
-            background: var(--navy);
-            opacity: 0;
-            transition: opacity 0.3s ease;
+            transition: all 0.3s ease;
         }
 
         .card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 25px -5px rgba(15, 23, 42, 0.05);
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(15, 23, 42, 0.05);
+            border-color: #cbd5e1;
         }
 
-        .card:hover::before {
-            opacity: 1;
-        }
-
-        .card-icon {
-            font-size: 2rem;
-            margin-bottom: 24px;
-            display: inline-block;
+        .card-num {
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 16px;
+            display: block;
         }
 
         .card h3 {
-            font-size: 1.6rem;
-            font-weight: 700;
-            margin-bottom: 16px;
+            font-size: 1.4rem;
+            margin-bottom: 12px;
             letter-spacing: -0.3px;
         }
 
         .card p {
             color: var(--slate);
-            font-size: 1.05rem;
-            line-height: 1.7;
+            font-size: 0.98rem;
+        }
+
+        /* Step-by-Step Operations Block */
+        .operations-bg {
+            background: #f1f5f9;
+        }
+
+        .timeline {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .step {
+            position: relative;
+            background: var(--white);
+            padding: 30px;
+            border-radius: 16px;
+            border: 1px solid var(--border);
+        }
+
+        .step-idx {
+            font-size: 2rem;
+            font-weight: 900;
+            color: #e2e8f0;
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            line-height: 1;
+        }
+
+        .step h5 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            margin-top: 10px;
+        }
+
+        .step p {
+            font-size: 0.9rem;
+            color: var(--slate);
         }
         
-        /* Premium Call To Action Footer */
-        .cta-section {
+        /* Call To Action Banner */
+        .cta-banner {
+            background: linear-gradient(135deg, var(--navy) 0%, #020617 100%);
+            color: var(--white);
+            padding: 80px 5%;
+            border-radius: 24px;
             text-align: center;
-            padding: 100px 8%;
-            background: var(--white);
+            max-width: 1200px;
+            margin: 80px auto;
         }
 
-        .cta-section h2 {
-            font-size: 2.8rem;
+        .cta-banner h2 {
+            font-size: 2.5rem;
             font-weight: 800;
             letter-spacing: -1px;
-            margin-bottom: 20px;
+            margin-bottom: 16px;
         }
 
-        .cta-section p {
-            color: var(--slate);
-            font-size: 1.2rem;
+        .cta-banner p {
+            color: #94a3b8;
+            font-size: 1.1rem;
             max-width: 500px;
-            margin: 0 auto 40px;
+            margin: 0 auto 32px;
         }
 
         /* Buttons */
         .btn { 
-            background: var(--navy); 
+            background: var(--accent); 
             color: var(--white); 
-            padding: 20px 44px; 
-            border-radius: 14px; 
+            padding: 16px 36px; 
+            border-radius: 10px; 
             text-decoration: none; 
             font-weight: 600; 
-            font-size: 1.1rem;
+            font-size: 1rem;
             display: inline-block; 
             transition: all 0.2s ease;
-            box-shadow: 0 10px 15px -3px rgba(15, 23, 42, 0.15);
         }
 
         .btn:hover {
+            background: #0369a1;
+            transform: translateY(-1px);
+        }
+
+        .btn-dark {
+            background: var(--navy);
+        }
+        .btn-dark:hover {
             background: var(--charcoal);
-            transform: translateY(-2px);
-            box-shadow: 0 20px 25px -5px rgba(15, 23, 42, 0.2);
-        }
-
-        .btn-secondary {
-            background: transparent;
-            color: var(--white);
-            border: 2px solid rgba(255, 255, 255, 0.2);
-            box-shadow: none;
-            margin-left: 15px;
-        }
-
-        .btn-secondary:hover {
-            background: rgba(255, 255, 255, 0.1);
-            border-color: var(--white);
-            color: var(--white);
         }
 
         /* Responsive Breakpoints */
-        @media (max-width: 768px) {
-            header { padding: 20px 5%; flex-direction: column; gap: 10px; text-align: center; }
-            .hero h1 { font-size: 2.5rem; }
-            .hero p { font-size: 1.1rem; }
-            .btn { width: 100%; margin-bottom: 12px; }
-            .btn-secondary { margin-left: 0; }
-            .section-header h2 { font-size: 2rem; }
-            .card { padding: 32px; }
+        @media (max-width: 1024px) {
+            .hero-grid { grid-template-columns: 1fr; gap: 40px; text-align: center; }
+            .hero-content { text-align: center; }
+            .hero-content p { margin-left: auto; margin-right: auto; }
+            .trust-grid { grid-template-columns: 1fr; margin-top: 40px; }
+            .services-layout { grid-template-columns: 1fr; }
+            .timeline { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (max-width: 640px) {
+            .hero-content h1 { font-size: 2.6rem; }
+            .timeline { grid-template-columns: 1fr; }
+            .cta-banner h2 { font-size: 1.8rem; }
         }
     </style>
 </head>
@@ -323,67 +354,107 @@
     <!-- Professional Navigation Bar -->
     <header>
         <div class="logo">RAPTURE <span>REMOVALS</span></div>
-        <div class="location-tag">Albury-Wodonga & Surrounding Regions</div>
+        <div class="location-tag">Albury-Wodonga & Surrounding</div>
     </header>
 
-    <!-- Premium Dark-Mode Hero Focus Area -->
-    <section class="hero">
-        <div class="hero-badge">Premium Asset Logistics</div>
-        <h1>Furniture Removals Handled with <span>Absolute Integrity</span>.</h1>
-        <p>Premium, fully-insured logistics engineered for residential estates and commercial clients who demand precision, punctuality, and total peace of mind.</p>
-        <div class="hero-buttons">
-            <a href="#contact" class="btn">Request Private Consultation</a>
+    <!-- Asymmetric Split Hero Section -->
+    <section class="hero-container">
+        <div class="hero-grid">
+            <div class="hero-content">
+                <div class="hero-badge">Premium Furniture Logistics</div>
+                <h1>Furniture Removals with <span>Absolute Integrity</span>.</h1>
+                <p>Fully-insured transport engineered for residential estates and commercial clients who demand meticulous execution, punctuality, and total structural care.</p>
+                <a href="#contact" class="btn btn-dark">Get a Premium Quote</a>
+            </div>
+            <div class="hero-image-wrapper">
+                <!-- Framed Workflow Graphic inside the main focus field -->
+                <img src="watermarked_img_16777458570956500019.png" alt="Rapture Removals Operational Workflow Map">
+            </div>
         </div>
     </section>
 
-    <!-- Trust Indicator Strip -->
-    <div class="mission-strip">
-        <div class="value-item"><span>✓</span> Fully Insured Transport</div>
-        <div class="value-item"><span>✓</span> Meticulous Inventory Tracking</div>
-        <div class="value-item"><span>✓</span> Elite Local Service</div>
+    <!-- Value Anchor Cards (Balances Whitespace) -->
+    <div class="trust-grid">
+        <div class="trust-box">
+            <h4><span>✓</span> Fully Insured Risk Cover</h4>
+            <p>Comprehensive protection parameters covering every item from transit assets to property surfaces.</p>
+        </div>
+        <div class="trust-box">
+            <h4><span>✓</span> Strict Asset Protection</h4>
+            <p>Headed by disciplined packing protocols using high-density shock blankets and commercial restraint bars.</p>
+        </div>
+        <div class="trust-box">
+            <h4><span>✓</span> Complete Account Transparency</h4>
+            <p>No hidden fuel or structural handling fees. Clear, itemized, and contracted logistics schedules.</p>
+        </div>
     </div>
 
-    <!-- Structured Workflow Gallery -->
-    <section class="process-section">
-        <div class="section-header">
-            <h2>Our Professional Workflow</h2>
-            <p>We approach every operational detail with absolute discipline, ensuring your property is cataloged, protected, and delivered in perfect order.</p>
-        </div>
-        <div class="image-container">
-            <img src="watermarked_img_16777458570956500019.png" alt="Rapture Removals Furniture Handling Blueprint" class="process-image">
+    <!-- Structured Strategic Services Block -->
+    <section class="section-padding">
+        <div class="section-inner">
+            <div class="section-header">
+                <h2>Tailored Relocation Services</h2>
+                <p>Every transit profile is customized around item vulnerability, inventory size, and site conditions.</p>
+            </div>
+            <div class="services-layout">
+                <div class="card">
+                    <span class="card-num">Protocol 01</span>
+                    <h3>Residential Relocation</h3>
+                    <p>Meticulous home transfers handled with care. Every piece of custom furniture, artwork, and appliance is treated with absolute priority, heavily wrapped, and placed precisely inside your new space.</p>
+                </div>
+                <div class="card">
+                    <span class="card-num">Protocol 02</span>
+                    <h3>Commercial Transitions</h3>
+                    <p>Designed to minimize company operational downtime. We coordinate streamlined loading pathways to transfer office fixtures, infrastructure, and files cleanly and efficiently.</p>
+                </div>
+                <div class="card">
+                    <span class="card-num">Protocol 03</span>
+                    <h3>High-Care Wrapping</h3>
+                    <p>The standard baseline for every move. Fragile components are individually cataloged, strapped securely in transit, and packed to fully mitigate friction or road-wear vibration.</p>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Expanded Strategic Services Section -->
-    <div class="services-container">
-        <div class="section-header">
-            <h2>Tailored Relocation Services</h2>
-            <p>Every transport profile is executed with heavy-duty protection and systematic execution protocols.</p>
+    <!-- Step-by-Step Logistics Flow Block (Adds Content Depth) -->
+    <section class="section-padding operations-bg">
+        <div class="section-inner">
+            <div class="section-header">
+                <h2>The Execution Framework</h2>
+                <p>How we ensure a seamless, damage-free transport process from initial review to final room placement.</p>
+            </div>
+            <div class="timeline">
+                <div class="step">
+                    <div class="step-idx">01</div>
+                    <h5>Inventory Audit</h5>
+                    <p>We review the scale and structural fragile areas of your furniture profile.</p>
+                </div>
+                <div class="step">
+                    <div class="step-idx">02</div>
+                    <h5>Heavy Blanket Wrapping</h5>
+                    <p>Industrial shock blankets are systematically taped and layered onto delicate surfaces.</p>
+                </div>
+                <div class="step">
+                    <div class="step-idx">03</div>
+                    <h5>Secure Transport Lock</h5>
+                    <p>Assets are anchored inside specialized tracks to prevent center-of-gravity shifting.</p>
+                </div>
+                <div class="step">
+                    <div class="step-idx">04</div>
+                    <h5>Precision Unload</h5>
+                    <p>Every single item is manually set down according to room-by-room staging layout rules.</p>
+                </div>
+            </div>
         </div>
-        <div class="services">
-            <div class="card">
-                <span class="card-icon">🏠</span>
-                <h3>Residential Relocation</h3>
-                <p>Full-scale home transfers managed with strict operational discipline. We treat your family heirlooms and custom furniture items with premium care, wrapping and padding every structural element before it leaves the room.</p>
-            </div>
-            <div class="card">
-                <span class="card-icon">🏢</span>
-                <h3>Commercial & Office Logistics</h3>
-                <p>Streamlined business asset relocations designed to protect sensitive gear and keep company downtime to zero. Efficient, organized asset placement ensures a seamless transition to your new headquarters.</p>
-            </div>
-            <div class="card">
-                <span class="card-icon">🔒</span>
-                <h3>Secure Asset Protection</h3>
-                <p>Our gold standard protocol. Every piece of furniture is strategically dynamic-blanketed, secured using heavy-duty straps, and structurally cataloged to completely eliminate risk or transit wear.</p>
-            </div>
-        </div>
-    </div>
+    </section>
 
-    <!-- Conversion Call To Action -->
-    <section class="cta-section" id="contact">
-        <h2>Secure Your Moving Date</h2>
-        <p>Contact our transport coordinators today for a transparent, itemized quote tailored completely to your inventory.</p>
-        <a href="tel:#" class="btn">Book Transfer Now</a>
+    <!-- Conversion Banner Footer -->
+    <section class="section-padding" id="contact">
+        <div class="cta-banner">
+            <h2>Secure Your Transport Date</h2>
+            <p>Contact our local Albury team today for an accurate, itemized structural moving quote.</p>
+            <a href="tel:#" class="btn">Book Transfer Now</a>
+        </div>
     </section>
 
 </body>

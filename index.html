@@ -3,163 +3,235 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rapture Removals | Furniture Removalists Albury</title>
+    <title>Rapture Removals | Premium Furniture Transport Albury</title>
     <style>
         :root {
-            --sky-blue-light: #e3f2fd; /* Light Sky Background */
-            --sky-blue-main: #29b6f6;  /* Vibrant Sky Blue */
-            --sky-blue-dark: #0288d1;  /* Deep Sky Blue for text/buttons */
-            --charcoal: #37474f;       /* Clean text color */
-            --white: #ffffff;
+            --sky-gradient: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%);
+            --navy-deep: #0f172a;
+            --navy-muted: #334155;
+            --gold-halo: #f59e0b;
+            --glass-bg: rgba(255, 255, 255, 0.7);
+            --glass-border: rgba(255, 255, 255, 0.5);
+            --card-shadow: 0 8px 32px 0 rgba(15, 23, 42, 0.06);
         }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
         
         body { 
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; 
-            margin: 0; 
-            padding: 0; 
-            color: var(--charcoal); 
-            background-color: var(--sky-blue-light); 
-        }
-        
-        header { 
-            background: linear-gradient(135deg, var(--sky-blue-main), var(--sky-blue-dark)); 
-            color: var(--white); 
-            padding: 25px 20px; 
-            display: flex; 
-            justify-content: space-between; 
-            align-items: center;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        
-        .logo { 
-            font-weight: 800; 
-            font-size: 26px; 
-            letter-spacing: 0.5px; 
-        }
-        
-        .logo span { 
-            font-weight: 300; 
-            color: var(--sky-blue-light); 
-        }
-        
-        .hero { 
-            background: var(--white); 
-            padding: 80px 20px; 
-            text-align: center;
-            border-bottom: 5px solid var(--sky-blue-main);
-        }
-        
-        .hero h1 { 
-            font-size: 40px; 
-            color: var(--sky-blue-dark);
-            margin-bottom: 15px; 
-        }
-        
-        .hero p { 
-            font-size: 21px; 
-            max-width: 700px; 
-            margin: 0 auto 35px auto; 
-            color: var(--charcoal);
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; 
+            background: var(--sky-gradient);
+            background-attachment: fixed;
+            color: var(--navy-deep);
             line-height: 1.6;
         }
+
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+
+        /* Navigation */
+        header {
+            background: rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--glass-border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: 20px 0;
+        }
+        .nav-wrapper { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 24px; font-weight: 800; letter-spacing: 1px; color: var(--navy-deep); }
+        .logo span { font-weight: 300; color: var(--navy-muted); }
+        .nav-tag { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: var(--navy-muted); }
+
+        /* Hero Section */
+        .hero { padding: 90px 0 60px 0; text-align: center; }
+        .hero h1 { font-size: 48px; font-weight: 800; line-height: 1.2; margin-bottom: 20px; color: var(--navy-deep); }
+        .hero p { font-size: 20px; max-width: 750px; margin: 0 auto 35px auto; color: var(--navy-muted); }
         
-        .btn { 
-            background: var(--sky-blue-main); 
-            color: var(--white); 
+        /* Buttons */
+        .cta-btn { 
+            background: var(--navy-deep); 
+            color: white; 
             padding: 16px 36px; 
             text-decoration: none; 
-            font-weight: bold; 
-            border-radius: 50px; 
+            font-weight: 700; 
+            border-radius: 8px; 
             display: inline-block; 
-            font-size: 18px; 
-            box-shadow: 0 4px 15px rgba(41, 182, 246, 0.4);
-            transition: background 0.2s;
-        }
-        
-        .btn:hover {
-            background: var(--sky-blue-dark);
-        }
-        
-        .section-title {
-            text-align: center;
-            font-size: 28px;
-            color: var(--sky-blue-dark);
-            margin-top: 50px;
-            margin-bottom: 10px;
-        }
-
-        .removal-services { 
-            padding: 20px; 
-            max-width: 1100px; 
-            margin: 0 auto 60px auto; 
-            display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
-            gap: 25px; 
-        }
-        
-        .service-card { 
-            background: var(--white); 
-            padding: 35px 25px; 
-            border-radius: 12px; 
-            box-shadow: 0 4px 12px rgba(2, 136, 209, 0.08); 
-            border: 1px solid rgba(41, 182, 246, 0.2);
-            text-align: center;
-        }
-        
-        .service-card h3 { 
-            margin-top: 0; 
-            color: var(--sky-blue-dark); 
-            font-size: 22px;
-        }
-
-        .service-card p {
+            box-shadow: 0 4px 12px rgba(15, 23, 42, 0.15);
+            transition: all 0.2s ease;
+            border: none;
+            cursor: pointer;
             font-size: 16px;
-            line-height: 1.5;
-            color: var(--charcoal);
         }
+        .cta-btn:hover { background: #1e293b; transform: translateY(-2px); }
+
+        /* Grid Layouts */
+        .section-title { text-align: center; font-size: 32px; font-weight: 800; margin: 60px 0 30px 0; position: relative; }
         
-        footer { 
-            background: var(--sky-blue-dark); 
-            color: var(--white); 
-            text-align: center; 
-            padding: 30px; 
-            font-size: 15px; 
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-bottom: 60px; }
+        
+        /* Premium Glass Cards */
+        .glass-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            padding: 40px 30px;
+            box-shadow: var(--card-shadow);
+            transition: transform 0.3s ease;
         }
+        .glass-card:hover { transform: translateY(-5px); }
+        .glass-card h3 { font-size: 22px; margin-bottom: 15px; color: var(--navy-deep); }
+        .glass-card p { color: var(--navy-muted); font-size: 16px; }
+
+        /* Interactive Quote Form */
+        .form-wrapper { max-width: 650px; margin: 0 auto 80px auto; }
+        .form-group { margin-bottom: 20px; text-align: left; }
+        .form-group label { display: block; font-weight: 600; margin-bottom: 8px; font-size: 14px; }
+        .form-control { 
+            width: 100%; 
+            padding: 14px; 
+            border-radius: 8px; 
+            border: 1px solid rgba(15, 23, 42, 0.15); 
+            background: rgba(255, 255, 255, 0.8);
+            font-size: 16px;
+            color: var(--navy-deep);
+        }
+        .form-control:focus { outline: none; border-color: var(--navy-deep); background: white; }
+        
+        /* Service Areas List */
+        .area-tags { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-bottom: 40px; }
+        .tag { background: rgba(255, 255, 255, 0.5); border: 1px solid var(--glass-border); padding: 8px 16px; border-radius: 30px; font-size: 14px; font-weight: 500; }
+
+        /* Accordion FAQs */
+        .faq-item { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 12px; margin-bottom: 15px; padding: 20px; cursor: pointer; text-align: left; }
+        .faq-question { font-weight: 700; font-size: 18px; display: flex; justify-content: space-between; align-items: center; }
+        .faq-answer { display: none; margin-top: 15px; color: var(--navy-muted); border-top: 1px solid rgba(15, 23, 42, 0.05); padding-top: 15px; }
+
+        footer { background: var(--navy-deep); color: #94a3b8; text-align: center; padding: 40px 20px; font-size: 14px; margin-top: 100px; }
+        footer p { margin-bottom: 10px; }
     </style>
 </head>
 <body>
 
     <header>
-        <div class="logo">RAPTURE <span>REMOVALS</span></div>
-        <div><strong>Albury & Surrounding Areas</strong></div>
+        <div class="container nav-wrapper">
+            <div class="logo">RAPTURE <span>REMOVALS</span></div>
+            <div class="nav-tag">Premium Furniture Transport</div>
+        </div>
     </header>
 
-    <section class="hero">
-        <h1>Professional Furniture Removals</h1>
-        <p>Reliable, careful, and efficient home and office furniture moving services. Based in Albury, we handle your heavy lifting and transport with absolute integrity.</p>
-        <a href="mailto:your-email@domain.com?subject=Furniture Removal Quote Request" class="btn">Get a Free Moving Quote</a>
-    </section>
+    <main class="container">
+        
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1>Furniture Removals conducted with absolute integrity.</h1>
+            <p>Reliable, precise, and fully insured removalists serving Albury, Wodonga, and surrounding regions. We take care of the heavy lifting so you don't have to.</p>
+            <a href="#quote" class="cta-btn">Book Your Move / Get Quote</a>
+        </section>
 
-    <h2 class="section-title">Our Furniture Removal Services</h2>
+        <!-- Services Section -->
+        <h2 class="section-title">Our Specialized Removal Services</h2>
+        <section class="grid">
+            <div class="glass-card">
+                <h3>Residential Removals</h3>
+                <p>Complete home relocations managed carefully. From large family residences to compact apartments, we protect your valuables at every turn.</p>
+            </div>
+            <div class="glass-card">
+                <h3>Commercial & Office Relocations</h3>
+                <p>Efficient furniture transit designed to minimize operational downtime. Secure handling of desks, chairs, storage, and equipment.</p>
+            </div>
+            <div class="glass-card">
+                <h3>Single Item Pickups</h3>
+                <p>Have a heavy sofa, dining table, or delicate antique cabinet that needs individual transport? We offer dedicated, rapid local drop-offs.</p>
+            </div>
+        </section>
 
-    <section class="removal-services">
-        <div class="service-card">
-            <h3>Full House Removals</h3>
-            <p>From large family homes to apartments, we safely wrap, pack, and transport your entire furniture inventory to your new location.</p>
-        </div>
-        <div class="service-card">
-            <h3>Office & Business Moves</h3>
-            <p>Streamlined furniture relocation for local offices, ensuring your desks, chairs, and electronics are moved securely with minimal downtime.</p>
-        </div>
-        <div class="service-card">
-            <h3>Single Item Transport</h3>
-            <p>Need just a heavy couch, bed, or bulky cabinet moved? We offer quick and careful transit for individual furniture pieces.</p>
-        </div>
-    </section>
+        <!-- Interactive Quote Form Section -->
+        <h2 id="quote" class="section-title">Request a Free Moving Quote</h2>
+        <section class="glass-card form-wrapper">
+            <form action="https://formspree.io/f/your-form-id-here" method="POST"> <!-- Swap out with a free form service link later if desired -->
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" class="form-control" required placeholder="John Doe">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" class="form-control" required placeholder="0400 000 000">
+                </div>
+                <div class="form-group">
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                        <div>
+                            <label for="from">Pickup Suburb</label>
+                            <input type="text" id="from" name="from" class="form-control" required placeholder="e.g., Albury">
+                        </div>
+                        <div>
+                            <label for="to">Drop-off Suburb</label>
+                            <input type="text" id="to" name="to" class="form-control" required placeholder="e.g., Lavington">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="date">Target Move Date</label>
+                    <input type="date" id="date" name="date" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="details">Inventory Details / Special Instructions</label>
+                    <textarea id="details" name="details" rows="4" class="form-control" placeholder="List your major furniture items or note any stairs/difficult entry points..."></textarea>
+                </div>
+                <button type="submit" class="cta-btn" style="width: 100%;">Submit Details</button>
+            </form>
+        </section>
+
+        <!-- Service Areas Section -->
+        <h2 class="section-title">Operational Service Areas</h2>
+        <section style="text-align: center; max-width: 800px; margin: 0 auto 60px auto;">
+            <p style="margin-bottom: 25px; font-size: 18px; color: var(--navy-muted);">Proudly based in the Albury region, we actively handle residential and commercial relocations across the twin cities and all neighboring regional areas:</p>
+            <div class="area-tags">
+                <span class="tag">Albury</span><span class="tag">Wodonga</span><span class="tag">Lavington</span>
+                <span class="tag">Thurgoona</span><span class="tag">Howlong</span><span class="tag">Jindera</span>
+                <span class="tag">Corowa</span><span class="tag">Rutherglen</span><span class="tag">Beechworth</span>
+                <span class="tag">Yackandandah</span><span class="tag">Tallangatta</span>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <section style="max-width: 750px; margin: 0 auto 40px auto;">
+            <div class="faq-item" onclick="toggleFaq(this)">
+                <div class="faq-question">Are you fully insured for breakages? <span>+</span></div>
+                <div class="faq-answer">Yes. Absolute peace of mind is standard. Your furniture items are covered by comprehensive transit insurance options throughout the entire loading, moving, and unloading process.</div>
+            </div>
+            <div class="faq-item" onclick="toggleFaq(this)">
+                <div class="faq-question">Do you charge hidden fees or call-out rates? <span>+</span></div>
+                <div class="faq-answer">Never. Our business operates strictly on upfront honesty and integrity. You will receive a clear pricing estimate, and we don't slip hidden surcharges into your final invoice.</div>
+            </div>
+            <div class="faq-item" onclick="toggleFaq(this)">
+                <div class="faq-question">Can you move heavy or fragile individual specialty items? <span>+</span></div>
+                <div class="faq-answer">Absolutely. We have the proper straps, protective wraps, and mechanical trolleys required to handle heavy timber items, large electronics, and delicate glassware safely.</div>
+            </div>
+        </section>
+
+    </main>
 
     <footer>
-        <p>&copy; 2026 Rapture Removals. Professional Furniture Removalists. Albury, Wodonga, and Beyond.</p>
+        <p>&copy; 2026 Rapture Removals. All Rights Reserved.</p>
+        <p>Premium Furniture Removalists serving Albury, NSW and surrounding areas.</p>
     </footer>
 
+    <script>
+        function toggleFaq(element) {
+            const answer = element.querySelector('.faq-answer');
+            const sign = element.querySelector('.faq-question span');
+            if (answer.style.display === 'block') {
+                answer.style.display = 'none';
+                sign.textContent = '+';
+            } else {
+                answer.style.display = 'block';
+                sign.textContent = '−';
+            }
+        }
+    </script>
 </body>
 </html>

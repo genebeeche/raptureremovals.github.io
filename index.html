@@ -3,58 +3,162 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rapture Removals | Professional Moving & Storage Albury</title>
+    <title>Rapture Removals | Furniture Removalists Albury</title>
     <style>
         :root {
-            --primary: #1a252f; /* Deep Professional Charcoal/Navy */
-            --accent: #f39c12;  /* Safety Gold for Action Buttons */
-            --light: #f8f9fa;
-            --text: #333333;
+            --sky-blue-light: #e3f2fd; /* Light Sky Background */
+            --sky-blue-main: #29b6f6;  /* Vibrant Sky Blue */
+            --sky-blue-dark: #0288d1;  /* Deep Sky Blue for text/buttons */
+            --charcoal: #37474f;       /* Clean text color */
+            --white: #ffffff;
         }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; margin: 0; padding: 0; color: var(--text); background-color: var(--light); }
-        header { background: var(--primary); color: white; padding: 20px; display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-weight: 800; font-size: 24px; letter-spacing: 1px; }
-        .logo span { font-weight: 300; color: #bdc3c7; }
-        .hero { background: linear-gradient(rgba(26, 37, 47, 0.85), rgba(26, 37, 47, 0.95)), url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80') center/cover; color: white; padding: 100px 20px; text-align: center; }
-        .hero h1 { font-size: 42px; margin-bottom: 10px; }
-        .hero p { font-size: 20px; max-width: 600px; margin: 0 auto 30px auto; color: #ecf0f1; }
-        .btn { background: var(--accent); color: var(--primary); padding: 15px 30px; text-decoration: none; font-weight: bold; border-radius: 5px; display: inline-block; font-size: 18px; }
-        .values { padding: 60px 20px; max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
-        .card { background: white; padding: 30px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border-top: 4px solid var(--primary); }
-        .card h3 { margin-top: 0; color: var(--primary); }
-        footer { background: var(--primary); color: #95a5a6; text-align: center; padding: 30px; font-size: 14px; }
+        
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; 
+            margin: 0; 
+            padding: 0; 
+            color: var(--charcoal); 
+            background-color: var(--sky-blue-light); 
+        }
+        
+        header { 
+            background: linear-gradient(135deg, var(--sky-blue-main), var(--sky-blue-dark)); 
+            color: var(--white); 
+            padding: 25px 20px; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .logo { 
+            font-weight: 800; 
+            font-size: 26px; 
+            letter-spacing: 0.5px; 
+        }
+        
+        .logo span { 
+            font-weight: 300; 
+            color: var(--sky-blue-light); 
+        }
+        
+        .hero { 
+            background: var(--white); 
+            padding: 80px 20px; 
+            text-align: center;
+            border-bottom: 5px solid var(--sky-blue-main);
+        }
+        
+        .hero h1 { 
+            font-size: 40px; 
+            color: var(--sky-blue-dark);
+            margin-bottom: 15px; 
+        }
+        
+        .hero p { 
+            font-size: 21px; 
+            max-width: 700px; 
+            margin: 0 auto 35px auto; 
+            color: var(--charcoal);
+            line-height: 1.6;
+        }
+        
+        .btn { 
+            background: var(--sky-blue-main); 
+            color: var(--white); 
+            padding: 16px 36px; 
+            text-decoration: none; 
+            font-weight: bold; 
+            border-radius: 50px; 
+            display: inline-block; 
+            font-size: 18px; 
+            box-shadow: 0 4px 15px rgba(41, 182, 246, 0.4);
+            transition: background 0.2s;
+        }
+        
+        .btn:hover {
+            background: var(--sky-blue-dark);
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 28px;
+            color: var(--sky-blue-dark);
+            margin-top: 50px;
+            margin-bottom: 10px;
+        }
+
+        .removal-services { 
+            padding: 20px; 
+            max-width: 1100px; 
+            margin: 0 auto 60px auto; 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+            gap: 25px; 
+        }
+        
+        .service-card { 
+            background: var(--white); 
+            padding: 35px 25px; 
+            border-radius: 12px; 
+            box-shadow: 0 4px 12px rgba(2, 136, 209, 0.08); 
+            border: 1px solid rgba(41, 182, 246, 0.2);
+            text-align: center;
+        }
+        
+        .service-card h3 { 
+            margin-top: 0; 
+            color: var(--sky-blue-dark); 
+            font-size: 22px;
+        }
+
+        .service-card p {
+            font-size: 16px;
+            line-height: 1.5;
+            color: var(--charcoal);
+        }
+        
+        footer { 
+            background: var(--sky-blue-dark); 
+            color: var(--white); 
+            text-align: center; 
+            padding: 30px; 
+            font-size: 15px; 
+        }
     </style>
 </head>
 <body>
 
     <header>
         <div class="logo">RAPTURE <span>REMOVALS</span></div>
-        <div><strong>Albury & Surrounding Regions</strong></div>
+        <div><strong>Albury & Surrounding Areas</strong></div>
     </header>
 
     <section class="hero">
-        <h1>Professional Moving Services You Can Trust</h1>
-        <p>Reliable, careful, and fully insured removalists serving Albury, Wodonga, and regional areas. Moving with absolute integrity.</p>
-        <a href="mailto:your-email@domain.com?subject=Quote Request" class="btn">Get a Free Quote</a>
+        <h1>Professional Furniture Removals</h1>
+        <p>Reliable, careful, and efficient home and office furniture moving services. Based in Albury, we handle your heavy lifting and transport with absolute integrity.</p>
+        <a href="mailto:your-email@domain.com?subject=Furniture Removal Quote Request" class="btn">Get a Free Moving Quote</a>
     </section>
 
-    <section class="values">
-        <div class="card">
-            <h3>Absolute Integrity</h3>
-            <p>No hidden fees, no surprise charges, and completely transparent, upfront communication from start to finish.</p>
+    <h2 class="section-title">Our Furniture Removal Services</h2>
+
+    <section class="removal-services">
+        <div class="service-card">
+            <h3>Full House Removals</h3>
+            <p>From large family homes to apartments, we safely wrap, pack, and transport your entire furniture inventory to your new location.</p>
         </div>
-        <div class="card">
-            <h3>Professional Care</h3>
-            <p>We treat your belongings like our own. Every single piece of furniture is safely wrapped, strapped, and transported securely.</p>
+        <div class="service-card">
+            <h3>Office & Business Moves</h3>
+            <p>Streamlined furniture relocation for local offices, ensuring your desks, chairs, and electronics are moved securely with minimal downtime.</p>
         </div>
-        <div class="card">
-            <h3>Fully Insured</h3>
-            <p>Peace of mind comes standard. Your move is fully backed by comprehensive transit insurance covers.</p>
+        <div class="service-card">
+            <h3>Single Item Transport</h3>
+            <p>Need just a heavy couch, bed, or bulky cabinet moved? We offer quick and careful transit for individual furniture pieces.</p>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2026 Rapture Removals. All Rights Reserved. Serving Albury, Wodonga, and beyond.</p>
+        <p>&copy; 2026 Rapture Removals. Professional Furniture Removalists. Albury, Wodonga, and Beyond.</p>
     </footer>
 
 </body>
